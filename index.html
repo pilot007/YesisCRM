@@ -12,40 +12,41 @@
 <meta name="keywords" content="mobile web app, mobile template, mobile design, mobile app design, mobile app theme, mobile wordpress theme, my mobile app" />
 <title>GoMobile - A next generation web app theme</title>
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
-<link type="text/css" rel="stylesheet" href="colors/main/main.css"/>
+<link type="text/css" rel="stylesheet" href="colors/medical/medical.css"/>
 <link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css"/>
-<link type="text/css" rel="stylesheet" href="css/swipebox.css" />
+<link type="text/css" rel="stylesheet" href="css/swipebox.css"/>
 <link type="text/css" rel="stylesheet" href="css/plyr.css"/>
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet"> 
+<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'/>
 <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 <script src="js/jquery.validate.min.js" type="text/javascript"></script>
 </head>
-<body>
-<div id="header">
-      <div class="gohome radius20"><a href="#"><img src="images/icons/home.png" alt="" title="" /></a></div>
-      <div class="gomenu radius20"><a href="#" onclick="swiperParent.swipeTo(9);"><img src="images/icons/contact.png" alt="" title="" /></a></div>
+
+    <body>    	
+  <div id="header">
+      <div class="gohome"><a href="#"><img src="images/icons/home.png" alt="" title="" /></a></div>
+      <div class="gomenu"><a href="#" onclick="swiperParent.swipeTo(9);"><img src="images/icons/contact.png" alt="" title="" /></a></div>
   </div>
   <div class="swiper-container swiper-parent">
-    <div class="swiper-wrapper">
-    
-<!--Menu page-->
+    <div class="swiper-wrapper">    
+    	
+      <!--Menu page-->
       <div class="swiper-slide sliderbg_menu">
           <div class="swiper-container swiper-nested">
                    <div class="swiper-wrapper">
                         <div class="swiper-slide">
                                   <div class="slide-inner">
-                                        <div class="logo"><a href="#"><img src="colors/main/images/logo.png" alt="" title="" border="0" /></a></div>
+                                        <div class="logo"><a href="#"><img src="colors/medical/images/logo.png" alt="" title="" border="0" /></a></div>
                                         <div class="menu">
                                         <ul>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(1);"><img src="images/icons_colored/about.png" alt="" title="" /><span>ABOUT US</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(2);"><img src="images/icons_colored/tools.png" alt="" title="" /><span>FEATURES</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(3);"><img src="images/icons_colored/blog.png" alt="" title="" /><span>JOURNAL</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(4);"><img src="images/icons_colored/docs.png" alt="" title="" /><span>PORTFOLIO</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(5);"><img src="images/icons_colored/photos.png" alt="" title="" /><span>GALLERY</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(6);"><img src="images/icons_colored/videos.png" alt="" title="" /><span>VIDEOS</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(7);"><img src="images/icons_colored/clients.png" alt="" title="" /><span>CLIENTS</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(8);"><img src="images/icons_colored/twitter.png" alt="" title="" /><span>TWITTER</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(9);"><img src="images/icons_colored/contact.png" alt="" title="" /><span>CONTACT</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(1);"><img src="images/icons/about.png" alt="" title="" /><span>About Us</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(2);"><img src="images/icons/tools.png" alt="" title="" /><span>Services</span></a></li>
+                                        <li><a href="#" id="login" name="login" ><img src="images/icons/blog.png" alt="" title="" /><span>Blog</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(4);"><img src="images/icons/docs.png" alt="" title="" /><span>Portfolio</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(5);"><img src="images/icons/photos.png" alt="" title="" /><span>Gallery</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(6);"><img src="images/icons/videos.png" alt="" title="" /><span>Videos</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(7);"><img src="images/icons/clients.png" alt="" title="" /><span>Clients</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(8);"><img src="images/icons/twitter.png" alt="" title="" /><span>Twitter</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(9);"><img src="images/icons/contact.png" alt="" title="" /><span>Contact</span></a></li>
                                         </ul>
                                         <div class="clearfix"></div>
                                         </div>
@@ -56,7 +57,7 @@
           </div> 
       </div>
       
-<!--Page 1 content-->
+      <!--Page 1 content-->
       <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
@@ -65,7 +66,7 @@
                                         <div class="pages_container">
                                         <h2 class="page_title">About Us</h2>
                                         <div class="image_single radius4"><img src="images/page_photo.jpg" alt="" title="" border="0" /></div>
-                                        <div class="image_caption green green_borderbottom radius4">Image title</div>
+                                        <div class="image_caption green green_borderbottom">Image title</div>
                                         <h3>Imagination is our power</h3>
                                         <blockquote>Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product or service. <span class="quote_author">-Steve Jobs</span></blockquote>
                                         
@@ -84,7 +85,7 @@
                                         
                                         <h2>Toggle styles</h2>
         
-                                        <div class="toogle_wrap radius8">
+                                        <div class="toogle_wrap">
                                             <div class="trigger"><a href="#">toggle with text</a></div>
                                 
                                             <div class="toggle_container">
@@ -94,7 +95,7 @@
                                             </div>
                                         </div>
         
-                                        <div class="toogle_wrap radius8">
+                                        <div class="toogle_wrap">
                                             <div class="trigger"><a href="#">toggle with lists</a></div>
                                 
                                             <div class="toggle_container">
@@ -134,138 +135,33 @@
                                         </div>       
                                         
                                         <h2>Some buttons styles</h2>
-                                        <a href="#" class="button_12 green green_borderbottom radius4">Button 1/2</a>  <a href="#" class="button_12 blue blue_borderbottom radius4">Button 1/2</a>
-                                        <a href="#" class="button_12 red red_borderbottom radius4">Button 1/2</a>  <a href="#" class="button_12 orange orange_borderbottom radius4">Button 1/2</a> 
-                                        <a href="#" class="button_12 black black_borderbottom radius4">Button 1/2</a>  <a href="#" class="button_12 gray gray_borderbottom radius4">Button 1/2</a>  
-                                        <a href="#" class="button_11 bluegreen bluegreen_borderbottom radius4">Full width button</a>
+                                        <a href="#" class="button_12 green green_borderbottom">Button 1/2</a>  <a href="#" class="button_12 blue blue_borderbottom">Button 1/2</a>
+                                        <a href="#" class="button_12 red red_borderbottom">Button 1/2</a>  <a href="#" class="button_12 orange orange_borderbottom">Button 1/2</a> 
+                                        <a href="#" class="button_12 black black_borderbottom">Button 1/2</a>  <a href="#" class="button_12 gray gray_borderbottom">Button 1/2</a>  
+                                        <a href="#" class="button_11 bluegreen bluegreen_borderbottom">Full width button</a>
                                         
                                         <div class="clearfix"></div>
-      									<div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+      									<div class="scrolltop"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
-										
                                         <!--End of page container-->
                               </div>
                     </div>
-				<div class="swiper-slide">
-				       <div class="slide-inner"></div>
-				</div>							  
               </div>
               <div class="swiper-scrollbar"></div>
      </div>
      </div>
       
-<!--Page 2 content-->
+
+      <!--Page 3 content-->
       <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
                     <div class="swiper-slide">
                               <div class="slide-inner">
                                         <div class="pages_container">
-                                        <h2 class="page_title">Our motto</h2>
-                                        <blockquote>Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product or service. <span class="quote_author">-Steve Jobs</span></blockquote>
-                                        
-                                        <h3>Our main services</h3>
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/services.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Web development</h4>
-                                              <p>Lorem ipsum dolor sit <a href="#">amet consectetur</a> adipisicing elit, <strong>sed do eiusmod</strong> tempor</p>
-                                          </div>
-                                        </div>
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/layout.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Layout design</h4>
-                                          <p>Cras <strong>vestibulum</strong> <a href="#">justo eget lorem</a> semper ac facilisis nulla porta</p>
-                                          </div>
-                                        </div>  
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/pencil.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Drawing</h4>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                          </div>
-                                        </div>
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/code.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Programming</h4>
-                                          <p>Lorem ipsum dolor sit amet, <a href="#"><strong>consectetur adipisicing elit</strong></a>, sed do eiusmod tempor</p>
-                                          </div>
-                                        </div>                                     
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/travel.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Custom work</h4>
-                                          <p>Lorem ipsum dolor sit <a href="#">amet consectetur</a> adipisicing elit, <strong>sed do eiusmod</strong> tempor</p>
-                                          </div>
-                                        </div>
-                                        <div class="service_box">
-                                          <div class="services_icon"><img src="images/icons/security.png" alt="" title="" /></div>
-                                          <div class="service_content">
-                                          <h4>Security</h4>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-                                          </div>
-                                        </div>
-                                        
-                                        <h3>Prices</h3>
-                                        
-                                        <ul class="responsive_table">
-                                             <li class="table_row">
-                                                <div class="table_section_small">Nr</div>
-                                                <div class="table_section">Service</div>
-                                                <div class="table_section">Price</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">01</div>
-                                                <div class="table_section">Web development</div>
-                                                <div class="table_section">1200$</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">02</div>
-                                                <div class="table_section">Drawing</div>
-                                                <div class="table_section">600$</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">03</div>
-                                                <div class="table_section">Custom work</div>
-                                                <div class="table_section">500$</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">04</div>
-                                                <div class="table_section">Layout design</div>
-                                                <div class="table_section">800$</div> 
-                                             </li>
-                                             <li class="table_row">
-                                                <div class="table_section_small">05</div>
-                                                <div class="table_section">Security</div>
-                                                <div class="table_section">650$</div> 
-                                             </li>
-                                        </ul>
-                                        
-                                        <div class="clearfix"></div>
-      <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
-                                        </div>
-                                        <!--End of page container-->
-                              </div>
-                    </div>
-              </div>
-              <div class="swiper-scrollbar"></div>
-     </div>
-     </div>
-     
-<!--Page 3 content-->
-      <div class="swiper-slide sliderbg">
-      <div class="swiper-container swiper-nested">
-               <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                              <div class="slide-inner">
-                                        <div class="pages_container">
-                                        
                                         <div class="posts_archive_page">
-                                                <h2 class="page_title">Blog</h2>
-                                                
-                                                <div class="toogle_wrap_blog radius8">
+                                        <h2 class="page_title">Blog</h2>
+                                                <div class="toogle_wrap_blog">
                                                     <div class="trigger_blog"><a href="#">blog categories</a></div>
                                                         <div class="toggle_container_blog">
                                                             <ul class="listing_detailed">
@@ -275,7 +171,6 @@
                                                             </ul>
                                                         </div>
                                                 </div>
-                                                
                                                 <ul class="posts">
                                                 <li class="post" id="postid1">
                                                      <a href="#" class="post_more"></a>                     
@@ -363,7 +258,7 @@
                                                 <div id="loadMore" class="radius8">Load more posts</div> 
                                                 <div id="showLess" class="radius8">No more posts</div>
                                                 </div> <!--End of posts archive page-->
-                                                
+                                               
                                                 <ul class="post_details_page">
                                                 <li id="postid1">
                                                 <a class="backtoblog radius8">back to blog</a>
@@ -500,9 +395,7 @@
                                                         </div>
                                                   </li>
                                                 </ul>
-                                                
-                                                
- 										<div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+ 										<div class="scrolltop"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -511,7 +404,112 @@
               <div class="swiper-scrollbar"></div>
      </div>
      </div>
-<!--Page 4 content-->
+     
+
+
+      <!--Page 2 content-->
+      <div class="swiper-slide sliderbg">
+      <div class="swiper-container swiper-nested">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                              <div class="slide-inner">
+                                        <div class="pages_container">
+                                        <h2 class="page_title">Our motto</h2>
+                                        <blockquote>Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product or service. <span class="quote_author">-Steve Jobs</span></blockquote>
+                                        
+                                        <h3>Our main services</h3>
+                                        <div class="service_box">
+                                          <div class="services_icon"><img src="images/icons/services.png" alt="" title="" /></div>
+                                          <div class="service_content">
+                                          <h4>Web development</h4>
+                                              <p>Lorem ipsum dolor sit <a href="#">amet consectetur</a> adipisicing elit, <strong>sed do eiusmod</strong> tempor</p>
+                                          </div>
+                                        </div>
+                                        <div class="service_box">
+                                          <div class="services_icon"><img src="images/icons/layout.png" alt="" title="" /></div>
+                                          <div class="service_content">
+                                          <h4>Layout design</h4>
+                                          <p>Cras <strong>vestibulum</strong> <a href="#">justo eget lorem</a> semper ac facilisis nulla porta</p>
+                                          </div>
+                                        </div>  
+                                        <div class="service_box">
+                                          <div class="services_icon"><img src="images/icons/pencil.png" alt="" title="" /></div>
+                                          <div class="service_content">
+                                          <h4>Drawing</h4>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                          </div>
+                                        </div>
+                                        <div class="service_box">
+                                          <div class="services_icon"><img src="images/icons/code.png" alt="" title="" /></div>
+                                          <div class="service_content">
+                                          <h4>Programming</h4>
+                                          <p>Lorem ipsum dolor sit amet, <a href="#"><strong>consectetur adipisicing elit</strong></a>, sed do eiusmod tempor</p>
+                                          </div>
+                                        </div>                                     
+                                        <div class="service_box">
+                                          <div class="services_icon"><img src="images/icons/travel.png" alt="" title="" /></div>
+                                          <div class="service_content">
+                                          <h4>Custom work</h4>
+                                          <p>Lorem ipsum dolor sit <a href="#">amet consectetur</a> adipisicing elit, <strong>sed do eiusmod</strong> tempor</p>
+                                          </div>
+                                        </div>
+                                        <div class="service_box">
+                                          <div class="services_icon"><img src="images/icons/security.png" alt="" title="" /></div>
+                                          <div class="service_content">
+                                          <h4>Security</h4>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                          </div>
+                                        </div>
+                                        
+                                        <h3>Prices</h3>
+                                        
+                                        <ul class="responsive_table">
+                                             <li class="table_row">
+                                                <div class="table_section_small">Nr</div>
+                                                <div class="table_section">Service</div>
+                                                <div class="table_section">Price</div> 
+                                             </li>
+                                             <li class="table_row">
+                                                <div class="table_section_small">01</div>
+                                                <div class="table_section">Web development</div>
+                                                <div class="table_section">1200$</div> 
+                                             </li>
+                                             <li class="table_row">
+                                                <div class="table_section_small">02</div>
+                                                <div class="table_section">Drawing</div>
+                                                <div class="table_section">600$</div> 
+                                             </li>
+                                             <li class="table_row">
+                                                <div class="table_section_small">03</div>
+                                                <div class="table_section">Custom work</div>
+                                                <div class="table_section">500$</div> 
+                                             </li>
+                                             <li class="table_row">
+                                                <div class="table_section_small">04</div>
+                                                <div class="table_section">Layout design</div>
+                                                <div class="table_section">800$</div> 
+                                             </li>
+                                             <li class="table_row">
+                                                <div class="table_section_small">05</div>
+                                                <div class="table_section">Security</div>
+                                                <div class="table_section">650$</div> 
+                                             </li>
+                                        </ul>
+                                        
+                                        <div class="clearfix"></div>
+      <div class="scrolltop"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+                                        </div>
+                                        <!--End of page container-->
+                              </div>
+                    </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+     </div>
+     </div>
+     
+
+
+     <!--Page 4 content-->
       <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
@@ -519,7 +517,7 @@
                               <div class="slide-inner">
                                         <div class="pages_container">
                                         <h2 class="page_title">Portfolio</h2>
-                                        <div class="toogle_wrap radius8">
+                                        <div class="toogle_wrap">
                                             <div class="trigger"><a href="#">portfolio categories</a></div>
                                             <div class="toggle_container">
                                             <ul class="listing_detailed">
@@ -529,7 +527,7 @@
                                             </ul>
                                             </div>
                                         </div>
-                                        <div class="portfolio_item radius8">
+                                        <div class="portfolio_item">
                                              <div class="portfolio_image"><a rel="gallery-1" href="images/portfolio_thumb.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb.jpg" alt="" title="" border="0" /></a></div>
                                                  <div class="portfolio_details">
                                                  <h4>Webdesign work</h4>
@@ -537,7 +535,7 @@
                                                  <a rel="gallery-2" href="images/portfolio_thumb.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
                                                  </div>
                                         </div>
-                                        <div class="portfolio_item radius8">
+                                        <div class="portfolio_item">
                                              <div class="portfolio_image"><a rel="gallery-1" href="images/portfolio_thumb2.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb2.jpg" alt="" title="" border="0" /></a></div>
                                                  <div class="portfolio_details">
                                                  <h4>Mobile development</h4>
@@ -545,7 +543,7 @@
                                                  <a rel="gallery-2" href="images/portfolio_thumb2.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
                                                  </div>
                                         </div>
-                                        <div class="portfolio_item radius8">
+                                        <div class="portfolio_item">
                                              <div class="portfolio_image"><a rel="gallery-1" href="images/portfolio_thumb3.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb3.jpg" alt="" title="" border="0" /></a></div>
                                                  <div class="portfolio_details">
                                                  <h4>Applications</h4>
@@ -556,7 +554,7 @@
                                         <div class="clearfix"></div>
                                         
                                         <h3>Portfolio with round images</h3>
-                                        <div class="portfolio_item radius8">
+                                        <div class="portfolio_item">
                                              <div class="portfolio_image_round"><a rel="gallery-1" href="images/portfolio_thumb.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb.jpg" alt="" title="" border="0" /></a></div>
                                                  <div class="portfolio_details">
                                                  <h4>Webdesign work</h4>
@@ -564,7 +562,7 @@
                                                  <a rel="gallery-2" href="images/portfolio_thumb.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
                                                  </div>
                                         </div>
-                                         <div class="portfolio_item radius8">
+                                         <div class="portfolio_item">
                                              <div class="portfolio_image_round"><a rel="gallery-1" href="images/portfolio_thumb2.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb2.jpg" alt="" title="" border="0" /></a></div>
                                                  <div class="portfolio_details">
                                                  <h4>Mobile development</h4>
@@ -572,7 +570,7 @@
                                                  <a rel="gallery-2" href="images/portfolio_thumb2.jpg" class="swipebox view_details" title="Webdesign work">view details</a>
                                                  </div>
                                         </div>
-                                        <div class="portfolio_item radius8">
+                                        <div class="portfolio_item">
                                              <div class="portfolio_image_round"><a rel="gallery-1" href="images/portfolio_thumb3.jpg" class="swipebox" title="Webdesign work"><img src="images/portfolio_thumb3.jpg" alt="" title="" border="0" /></a></div>
                                                  <div class="portfolio_details">
                                                  <h4>Applications</h4>
@@ -582,7 +580,7 @@
                                         </div>
                                            
                                         <div class="clearfix"></div>
-      									<div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+      									<div class="scrolltop"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -592,7 +590,7 @@
      </div>
      </div>
      
-<!--Page 5 content-->
+      <!--Page 5 content-->
       <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
@@ -605,7 +603,7 @@
                                             <li><a rel="gallery-3" href="images/photos/photo2.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo2.jpg" alt="image"/></a></li>
                                             <li><a rel="gallery-3" href="images/photos/photo3.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo3.jpg" alt="image"/></a></li>
                                             <li><a rel="gallery-3" href="images/photos/photo4.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo4.jpg" alt="image"/></a></li>
-                                            <li><a rel="gallery-3" href="images/photos/photo5.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo5.jpg" alt="image"/></a></li>									
+                                            <li><a rel="gallery-3" href="images/photos/photo5.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo5.jpg" alt="image"/></a></li>
                                             <li><a rel="gallery-3" href="images/photos/photo6.jpg" title="Photo title" class="swipebox"><img src="images/photos/photo6.jpg" alt="image"/></a></li>
                                             </ul>
                                         <h2>Photo Gallery 1/2</h2>
@@ -630,11 +628,8 @@
                                             <li><a rel="video" href="https://www.youtube.com/watch?v=bwJWYlS-wnE" title="Photo title" class="swipebox-video"><img src="images/photos/photo10.jpg" alt="image"/></a></li>
                 				<li><a rel="video" href="https://www.youtube.com/watch?v=BuAtapRfauM" title="Photo title" class="swipebox-video"><img src="images/photos/photo11.jpg" alt="image"/></a></li>
                                             </ul>
-											
-							
-											
                                          <div class="clearfix"></div> 
-     				 <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+     									 <div class="scrolltop"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -643,7 +638,7 @@
               <div class="swiper-scrollbar"></div>
      </div>
      </div>
-<!--Page 6 content-->
+      <!--Page 6 content-->
       <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
@@ -654,7 +649,6 @@
                                         <p>
                                         Just some responsive videos. You can add your video description here.
                                         </p>
-
 				<h3>Self Hosted Video</h3>		
 				<div class="videocontainer">			
 				<video poster="videos/video-poster.jpg" controls>
@@ -675,7 +669,7 @@
 				</audio>				
 				</div>				  
 				<div class="clearfix"></div> 
-      				<div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+      										<div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -684,7 +678,7 @@
               <div class="swiper-scrollbar"></div>
      </div>
      </div>
-<!--Page 7 content-->
+      <!--Page 7 content-->
       <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
@@ -706,7 +700,7 @@
                                         <li>Nunc erat eros, cursus et commodo vitae, pulvinar ac libero.</li>
                                         <li>In erat elit, bibendum vitae commodo vitae, bibendum non justo.</li>
                                         </ul> 
-                                        <a href="#" class="button_12 green green_borderbottom radius4">See work</a>  <a href="#" class="button_12 blue blue_borderbottom radius4">Client web</a> 
+                                        <a href="#" class="button_12 green green_borderbottom">See work</a>  <a href="#" class="button_12 blue blue_borderbottom">Client web</a> 
                                       </div>
                                       <div class="client_row">                                  
                                         <div class="service_box">
@@ -722,12 +716,12 @@
                                         <li>Nunc erat eros, cursus et commodo vitae, pulvinar ac libero.</li>
                                         <li>In erat elit, bibendum vitae commodo vitae, bibendum non justo.</li>
                                         </ul>
-                                        <a href="#" class="button_12 green green_borderbottom radius4">See work</a>  <a href="#" class="button_12 blue blue_borderbottom radius4">Client web</a>  
+                                        <a href="#" class="button_12 green green_borderbottom">See work</a>  <a href="#" class="button_12 blue blue_borderbottom">Client web</a>  
                                       </div>
                                       
                                       
                                         <div class="clearfix"></div>
-    					<div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+    					<div class="scrolltop"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -736,7 +730,7 @@
               <div class="swiper-scrollbar"></div>
      </div>
      </div>
-<!--Page 8 content-->
+      <!--Page 8 content-->
       <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
@@ -747,7 +741,7 @@
                                         <div class="tweet"></div>
                                         <a href="#" class="button_11 blue">Follow Us!</a>
                                         <div class="clearfix"></div>
-										<div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+										<div class="scrolltop"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -756,7 +750,7 @@
               <div class="swiper-scrollbar"></div>
      </div>
      </div>
-<!--Page 9 content-->
+      <!--Page 9 content-->
       <div class="swiper-slide sliderbg">
       <div class="swiper-container swiper-nested">
                <div class="swiper-wrapper">
@@ -769,12 +763,12 @@
                                             <div class="form">
                                             <form class="cmxform" id="CommentForm" method="post" action="">
                                             <label>Name:</label>
-                                            <input type="text" name="ContactName" id="ContactName" value="" class="form_input radius4 required" />
+                                            <input type="text" name="ContactName" id="ContactName" value="" class="form_input required" />
                                             <label>Email:</label>
-                                            <input type="text" name="ContactEmail" id="ContactEmail" value="" class="form_input radius4 required email" />
+                                            <input type="text" name="ContactEmail" id="ContactEmail" value="" class="form_input required email" />
                                             <label>Message:</label>
-                                            <textarea name="ContactComment" id="ContactComment" class="form_textarea radius4 textarea required" rows="" cols=""></textarea>
-                                            <input type="submit" name="submit" class="form_submit radius4 green green_borderbottom" id="submit" value="Send" />
+                                            <textarea name="ContactComment" id="ContactComment" class="form_textarea textarea required" rows="" cols=""></textarea>
+                                            <input type="submit" name="submit" class="form_submit gray gray_borderbottom" id="submit" value="Send" />
                                             <input class="" type="hidden" name="to"  value="youremaill@yourwebsiteee.com" />
                                             <input class="" type="hidden" name="subject" value="Contacf form message" />
                                             <label id="loader" style="display:none;"><img src="images/loader.gif" alt="Loading..." id="LoadingGraphic" /></label>
@@ -792,11 +786,11 @@
                                             <li class="social_digg"><a href="#"><img src="images/icons/social/digg.png" alt="" title="" border="0" /></a></li>
                                             </ul>
                                         <h2>Give Us a call</h2>    
-                                        <a href="tel:123 456 789" class="call_button radius8">Click To Call Now!</a>
-                                        <a href="http://maps.google.com/maps?q=houston+usa&amp;hl=ro&amp;sll=37.0625,-95.677068&amp;sspn=53.961216,114.169922&amp;hnear=Houston,+Harris,+Texas&amp;t=m&amp;z=5" class="map_button radius8">View our location</a>  
+                                        <a href="tel:123 456 789" class="call_button">Click To Call Now!</a>
+                                        <a href="http://maps.google.com/maps?q=houston+usa&amp;hl=ro&amp;sll=37.0625,-95.677068&amp;sspn=53.961216,114.169922&amp;hnear=Houston,+Harris,+Texas&amp;t=m&amp;z=5" class="map_button">View our location</a>  
 
                                         <div class="clearfix"></div>
-                                        <div class="scrolltop radius20"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>    
+                                        <div class="scrolltop"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>    
                                         </div>
                                         <!--End of page container-->
                               </div>
@@ -822,6 +816,40 @@
 <script type="text/javascript" src="js/twitter/jquery.tweet.js" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
 var $ = jQuery.noConflict();  
+
+$("#login").on("click", function(){
+
+swiperParent.swipeTo(3);
+
+                $.ajax({
+                    url: "http://localhost:9090/istakip_yesis_webservices/GetMyActivities?android_id=9feff6f179273142&jsonType=1",
+                    dataType: 'json',
+                    success: function (a) {
+                        // Remove any list - so the new one can be added.
+                        $('#twitList ul').remove();
+                        // Need to add UL on AJAX call or formatting of userlist is not displayed
+                        $('#twitList').append('<ul data-role="listview"></ul>');
+                        listItems = $('#twitList').find('ul');
+                        $.each(a, function (key) {
+                            html = '<h1><a href="#">' + a[key].from + '</a></h1>';
+                            html += a[key].subject;
+                            listItems.append('<li>' + html + '</li>');
+                        });
+                        // Need to refresh list after AJAX call
+                        $('#twitList ul').listview();
+                        // Once all complete change the page
+                        //$.mobile.changePage("#results", "slide");
+                    }
+                });
+
+
+
+
+
+
+
+});
+
 jQuery(function($){
 $(".tweet").tweet({
   modpath: 'js/twitter/',
@@ -839,6 +867,7 @@ $(".tweet").tweet({
 </script>
 <script type="text/javascript">  
 function ajaxContact(theForm) {
+	alert('ajaxcontrol');
 var $ = jQuery;
 $('#loader').fadeIn();
 var formData = $(theForm).serialize(),
@@ -882,6 +911,6 @@ var i = setInterval(function() {
 });
 return false;
 }
-</script>  
+</script> 
 </body>
 </html>
