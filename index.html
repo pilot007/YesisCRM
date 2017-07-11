@@ -160,103 +160,14 @@
                               <div class="slide-inner">
                                         <div class="pages_container">
                                         <div class="posts_archive_page">
-                                        <h2 class="page_title">Blog</h2>
-                                                <div class="toogle_wrap_blog">
-                                                    <div class="trigger_blog"><a href="#">blog categories</a></div>
-                                                        <div class="toggle_container_blog">
-                                                            <ul class="listing_detailed">
-                                                            <li><a href="#">webdesign work</a></li>
-                                                            <li><a href="#">painted illustrations</a></li>
-                                                            <li><a href="#">programming and javascript</a></li>
-                                                            </ul>
-                                                        </div>
+                                               <div class="toogle_wrap_blog">
+                                                    <div class="trigger_blog"><a href="#">İş Listesi</a></div>
+                                                       
                                                 </div>
-                                                <ul class="posts">
-                                                <li class="post" id="postid1">
-                                                     <a href="#" class="post_more"></a>                     
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">blog category</a>
-                                                     <span class="post_comments">25 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
+                                                <ul id="ul_list" class="posts">
+                                                
 
-                                                    <div class="post_left">
-                                                        <span class="day">23</span>
-                                                        <span class="month">june</span>
-                                                    </div>
-
-                                                </li>
-                                                <li class="post" id="postid2">
-                                                     <a href="#" class="post_more"></a>
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Cras vestibulum justo eget lorem semper ac facilisis nulla porta...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">programming</a>
-                                                     <span class="post_comments">18 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
-                                                   
-                                                    <div class="post_left">
-                                                        <span class="day">18</span>
-                                                        <span class="month">sept</span>
-                                                    </div>
-                                                </li>
-                                                <li class="post" id="postid3">
-                                                     <a href="#" class="post_more"></a>                     
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Nam velit sapien, eleifend in tempus volutpat, posuere ullamcorper augue...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">blog category</a>
-                                                     <span class="post_comments">11 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
-
-                                                    <div class="post_left">
-                                                        <span class="day">09</span>
-                                                        <span class="month">dec</span>
-                                                    </div>
-
-                                                </li>
-                                                <li class="post" id="postid4">
-                                                     <a href="#" class="post_more"></a>
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Cras vestibulum justo eget lorem semper ac facilisis nulla porta...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">programming</a>
-                                                     <span class="post_comments">06 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
-                                                   
-                                                    <div class="post_left">
-                                                        <span class="day">12</span>
-                                                        <span class="month">mart</span>
-                                                    </div>
-                                                </li>
-                                                <li class="post" id="postid5">
-                                                     <a href="#" class="post_more"></a>
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Cras vestibulum justo eget lorem semper ac facilisis nulla porta...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">programming</a>
-                                                     <span class="post_comments">18 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
-                                                   
-                                                    <div class="post_left">
-                                                        <span class="day">18</span>
-                                                        <span class="month">sept</span>
-                                                    </div>
-                                                </li>
                                                 </ul>
-                                                <div id="loadMore" class="radius8">Load more posts</div> 
-                                                <div id="showLess" class="radius8">No more posts</div>
                                                 </div> <!--End of posts archive page-->
                                                
                                                 <ul class="post_details_page">
@@ -819,24 +730,77 @@ var $ = jQuery.noConflict();
 
 $("#login").on("click", function(){
 
-swiperParent.swipeTo(3);
+swiperParent.swipeTo(2);
 
                 $.ajax({
-                    url: "http://localhost:9090/istakip_yesis_webservices/GetMyActivities?android_id=9feff6f179273142&jsonType=1",
+                    url: "http://yesiscrm.net/ws/api/aktivite",
                     dataType: 'json',
                     success: function (a) {
                         // Remove any list - so the new one can be added.
-                        $('#twitList ul').remove();
+                        $('#ul_list ul').remove();
                         // Need to add UL on AJAX call or formatting of userlist is not displayed
-                        $('#twitList').append('<ul data-role="listview"></ul>');
-                        listItems = $('#twitList').find('ul');
+                        $('#ul_list').append('<ul data-role="listview"></ul>');
+                        listItems = $('#ul_list').find('ul');
+                        /*
+                         <ul id="ul_list" class="posts">
+                                                <li class="post" id="postid1">
+                                                     <a href="#" class="post_more"></a>                     
+                                                     <div class="post_right_reveal">
+                                                     <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</a></h4>
+                                                     </div>
+                                                     <div class="post_right_unreveal">
+                                                     Posted in <a href="#">blog category</a>
+                                                     <span class="post_comments">25 Comments</span>
+                                                     <a href="#" class="post_readmore">read more</a>
+                                                     </div> 
+
+                                                    <div class="post_left">
+                                                        <span class="day">23</span>
+                                                        <span class="month">june</span>
+                                                    </div>
+
+                                                </li>
+                        */
+                       
+                       /*
+                            html = '<li class="post">';
+                                                    html +=  '<a href="#" ></a>';                     
+                                                     html +=  '<div class="post_right_reveal">';
+                                                     html +=  '<a href="#">'+ a[key].Musteri +'<br>'+a[key].Aciklama  
+                                                     +'<br>'+a[key].AktiviteDurumu +'<a>';
+                                                     html +=  '</div>';
+                                                     
+
+                                                    html +=  '<div class="post_left">';
+                                                    html +=  '    <span >'+a[key].Id+'</span> <br>';
+                                                    html +=  '    <span >'+a[key].PersonelAdi+'</span>';
+                                                    html +=  '</div>';
+                                                html +=  '</li>';
+                        */
+                        
                         $.each(a, function (key) {
-                            html = '<h1><a href="#">' + a[key].from + '</a></h1>';
-                            html += a[key].subject;
+                        	
+                            html = '<li class="post">';
+                                                    html +=  '<a href="#" ></a>';                     
+                                                     html +=  '<div class="post_right_reveal">';
+                                                     html +=  '<a href="#">'+ a[key].Musteri +'<br>'+a[key].Aciklama  
+                                                     +'</a>';
+                                                     html +=  '</div>';
+                                                     
+
+                                                    html +=  '<div class="post_left">';
+                                                    html +=  '    <span >'+a[key].PersonelAdi+'</span> <br>';
+                                                    html +=  '    <span >'+a[key].AktiviteDurumu+'</span>';
+                                                    html +=  '</div>';
+                                                html +=  '</li>';
+                            
+                            
                             listItems.append('<li>' + html + '</li>');
                         });
+                        //alert(html);
                         // Need to refresh list after AJAX call
-                        $('#twitList ul').listview();
+                        
+                        $('#ul_list ul').listview();
                         // Once all complete change the page
                         //$.mobile.changePage("#results", "slide");
                     }
