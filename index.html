@@ -35,18 +35,13 @@
                    <div class="swiper-wrapper">
                         <div class="swiper-slide">
                                   <div class="slide-inner">
-                                        <div class="logo"><a href="#"><img src="colors/medical/images/logo.png" alt="" title="" border="0" /></a></div>
+                                        <div class="logo">YESIS MOBILE CRM</div>
                                         <div class="menu">
                                         <ul>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(1);"><img src="images/icons/about.png" alt="" title="" /><span>About Us</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(2);"><img src="images/icons/tools.png" alt="" title="" /><span>Services</span></a></li>
-                                        <li><a href="#" id="login" name="login" ><img src="images/icons/blog.png" alt="" title="" /><span>Blog</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(4);"><img src="images/icons/docs.png" alt="" title="" /><span>Portfolio</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(5);"><img src="images/icons/photos.png" alt="" title="" /><span>Gallery</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(6);"><img src="images/icons/videos.png" alt="" title="" /><span>Videos</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(7);"><img src="images/icons/clients.png" alt="" title="" /><span>Clients</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(8);"><img src="images/icons/twitter.png" alt="" title="" /><span>Twitter</span></a></li>
-                                        <li><a href="#" onclick="swiperParent.swipeTo(9);"><img src="images/icons/contact.png" alt="" title="" /><span>Contact</span></a></li>
+                                        <li><a href="#" id="login" name="login" ><img src="images/icons/blog.png" alt="" title="" /><span><h3>Aktiviteler</h3></span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(1);"><img src="images/icons/about.png" alt="" title="" /><span><h3>Şifre Sorgulama</h3></span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(2);"><img src="images/icons/tools.png" alt="" title="" /><span><h3>Servis Talep</h3></span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(4);"><img src="images/icons/docs.png" alt="" title="" /><span><h3>Envanter</h3></span></a></li>
                                         </ul>
                                         <div class="clearfix"></div>
                                         </div>
@@ -160,8 +155,8 @@
                               <div class="slide-inner">
                                         <div class="pages_container">
                                         <div class="posts_archive_page">
-                                               <div class="toogle_wrap_blog">
-                                                    <div class="trigger_blog"><a href="#">İş Listesi</a></div>
+                                               <div class="toogle_wrap">
+                                                    <div class="trigger"><a href="#">İş Listesi</a></div>
                                                        
                                                 </div>
                                                 <ul id="ul_list" class="posts">
@@ -780,7 +775,7 @@ swiperParent.swipeTo(2);
                         
                         $.each(a, function (key) {
                         	
-                            html = '<li class="post">';
+                            html = '<li class="post" id="id_'+key+'">';
                                                     html +=  '<a href="#" ></a>';                     
                                                      html +=  '<div class="post_right_reveal">';
                                                      html +=  '<a href="#">'+ a[key].Musteri +'<br>'+a[key].Aciklama  
@@ -800,7 +795,7 @@ swiperParent.swipeTo(2);
                         //alert(html);
                         // Need to refresh list after AJAX call
                         
-                        $('#ul_list ul').listview();
+                        //$('#ul_list ul').listview();
                         // Once all complete change the page
                         //$.mobile.changePage("#results", "slide");
                     }
