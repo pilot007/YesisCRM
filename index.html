@@ -59,85 +59,25 @@
                     <div class="swiper-slide">
                               <div class="slide-inner">
                                         <div class="pages_container">
-                                        <h2 class="page_title">About Us</h2>
-                                        <div class="image_single radius4"><img src="images/page_photo.jpg" alt="" title="" border="0" /></div>
-                                        <div class="image_caption green green_borderbottom">Image title</div>
-                                        <h3>Imagination is our power</h3>
-                                        <blockquote>Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product or service. <span class="quote_author">-Steve Jobs</span></blockquote>
-                                        
-                                        <h3>Just a simple listing</h3>
-                                        <ul class="listing">
-                                        <li>Proin dignissim risus ut quam aliquam dignissim.</li>
-                                        <li>Nunc erat eros, cursus et commodo vitae, pulvinar ac libero.</li>
-                                        <li>In erat elit, bibendum vitae commodo vitae, bibendum non justo.</li>
-                                        </ul>
-                                        <h3>A more detailed listing</h3>
-                                        <ul class="listing_detailed">
-                                        <li><a href="#">Proin dignissim risus</a></li>
-                                        <li><a href="#">Nunc erat eros, cursus et</a></li>
-                                        <li><a href="#">In erat elit, bibendum</a></li>
-                                        </ul>
-                                        
-                                        <h2>Toggle styles</h2>
-        
-                                        <div class="toogle_wrap">
-                                            <div class="trigger"><a href="#">toggle with text</a></div>
-                                
-                                            <div class="toggle_container">
-                                            <p>
-                                        Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                     
+                                        <div id="tab1" >
+                                        	<h4 id="txt_id"></h4>
+                                            <div id="txt_aktiviteTipiId"></div>
+                                            <h4 id="txt_Customer"></h4>
+                                             <p id="txt_Personel">
                                             </p>
-                                            </div>
-                                        </div>
-        
-                                        <div class="toogle_wrap">
-                                            <div class="trigger"><a href="#">toggle with lists</a></div>
-                                
-                                            <div class="toggle_container">
-                                            <ul class="listing_detailed">
-                                            <li>Consectetur adipisicing elit sed</li>
-                                            <li>Sed do eiusmod tempor incididunt</li>
-                                            <li>Ut enim ad minim veniam</li>
-                                            </ul>
-                                            </div>
-                                        </div> 
-        
-                                        <h2>Some flexible <span class="tag">tabs</span></h2>
-                                        
-                                        <ul id="tabsmenu" class="tabsmenu">
-                                            <li class="active"><a href="#tab1">Text tab</a></li>
-                                            <li><a href="#tab2">Listing tab</a></li>
-                                            <li><a href="#tab3">Quote tab</a></li>
-                                        </ul>
-                                        <div id="tab1" class="tabcontent">
-                                            <h4>Simple text title</h4>
-                                            <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             <p id="txt_Aktivite">
                                             </p>
+                                            <p id="txt_desc">
+                                            </p>
+                                            <textarea id="txtComment" rows="5" cols="70"></textarea>
                                         </div>
-                                        <div id="tab2" class="tabcontent">
-                                            <h4>Listing title</h4>
-                                            <ul class="listing">
-                                            <li>Consectetur adipisicing elit sed</li>
-                                            <li>Sed do eiusmod tempor incididunt</li>
-                                            <li>Ut enim ad minim veniam</li>
-                                            </ul>
-                                        </div>
-                                
-                                        <div id="tab3" class="tabcontent">
-                                            <h4>Quote title</h4>
-                                            <blockquote>Design is the fundamental soul of a human-made creation that ends up expressing itself in successive outer layers of the product or service. <span class="quote_author">-Steve Jobs</span></blockquote>
-                                        </div>       
-                                        
-                                        <h2>Some buttons styles</h2>
-                                        <a href="#" class="button_12 green green_borderbottom">Button 1/2</a>  <a href="#" class="button_12 blue blue_borderbottom">Button 1/2</a>
-                                        <a href="#" class="button_12 red red_borderbottom">Button 1/2</a>  <a href="#" class="button_12 orange orange_borderbottom">Button 1/2</a> 
-                                        <a href="#" class="button_12 black black_borderbottom">Button 1/2</a>  <a href="#" class="button_12 gray gray_borderbottom">Button 1/2</a>  
-                                        <a href="#" class="button_11 bluegreen bluegreen_borderbottom">Full width button</a>
-                                        
+                                                                                                                      
+                                        <a href="#" id="btn_completed" class="button_12 blue blue_borderbottom">Tamamlandı</a>
+                                        <a href="#" id="btn_wait"  class="button_12 orange orange_borderbottom">Beklemede</a> 
+                                        <a href="#"  id="btn_cancel" class="button_12 gray gray_borderbottom">İptal</a>                                          
                                         <div class="clearfix"></div>
-      									<div class="scrolltop"><a href="#"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
-                                        </div>
+      									</div>
                                         <!--End of page container-->
                               </div>
                     </div>
@@ -165,7 +105,7 @@
                                                 </ul>
                                                 </div> <!--End of posts archive page-->
                                                
-                                                <ul class="post_details_page">
+                                                <ul id="ul_list_detail" class="post_details_page">
                                                 <li id="postid1">
                                                 <a class="backtoblog radius8">back to blog</a>
                                                     <h2 class="post_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
@@ -725,7 +665,7 @@ var $ = jQuery.noConflict();
 
 $("#login").on("click", function(){
 
-swiperParent.swipeTo(2);
+                swiperParent.swipeTo(2);
 
                 $.ajax({
                     url: "http://yesiscrm.net/ws/api/aktivite",
@@ -736,27 +676,6 @@ swiperParent.swipeTo(2);
                         // Need to add UL on AJAX call or formatting of userlist is not displayed
                         $('#ul_list').append('<ul data-role="listview"></ul>');
                         listItems = $('#ul_list').find('ul');
-                        /*
-                         <ul id="ul_list" class="posts">
-                                                <li class="post" id="postid1">
-                                                     <a href="#" class="post_more"></a>                     
-                                                     <div class="post_right_reveal">
-                                                     <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</a></h4>
-                                                     </div>
-                                                     <div class="post_right_unreveal">
-                                                     Posted in <a href="#">blog category</a>
-                                                     <span class="post_comments">25 Comments</span>
-                                                     <a href="#" class="post_readmore">read more</a>
-                                                     </div> 
-
-                                                    <div class="post_left">
-                                                        <span class="day">23</span>
-                                                        <span class="month">june</span>
-                                                    </div>
-
-                                                </li>
-                        */
-                       
                        /*
                             html = '<li class="post">';
                                                     html +=  '<a href="#" ></a>';                     
@@ -776,9 +695,9 @@ swiperParent.swipeTo(2);
                         $.each(a, function (key) {
                         	
                             html = '<li class="post" id="id_'+key+'">';
-                                                    html +=  '<a href="#" ></a>';                     
+                                                    html +=  '<a href="#"  ></a>';                     
                                                      html +=  '<div class="post_right_reveal">';
-                                                     html +=  '<a href="#">'+ a[key].Musteri +'<br>'+a[key].Aciklama  
+                                                     html +=  '<a href="#" onclick="gotodetail('+a[key].Id+')" >'+ a[key].Musteri +'<br>'+a[key].Aciklama  
                                                      +'</a>';
                                                      html +=  '</div>';
                                                      
@@ -790,7 +709,7 @@ swiperParent.swipeTo(2);
                                                 html +=  '</li>';
                             
                             
-                            listItems.append('<li>' + html + '</li>');
+                            listItems.append( html );
                         });
                         //alert(html);
                         // Need to refresh list after AJAX call
@@ -800,29 +719,67 @@ swiperParent.swipeTo(2);
                         //$.mobile.changePage("#results", "slide");
                     }
                 });
-
-
-
-
-
-
-
 });
 
-jQuery(function($){
-$(".tweet").tweet({
-  modpath: 'js/twitter/',
-  join_text: "auto",
-  username: "sindevothemes",
-  count: 5,
-  auto_join_text_default: "we said,",
-  auto_join_text_ed: "we",
-  auto_join_text_ing: "we were",
-  auto_join_text_reply: "we replied",
-  auto_join_text_url: "we were checking out",
-  loading_text: "loading tweets..."
+         
+$("#btn_completed").on("click", function(){
+
+
+                 $.ajax({
+                    url: "http://yesiscrm.net/ws/api/aktivite/tamamlandi?id="+$('#txt_id').text()+"&durumId=12&aciklama=" + $('#txtComment').text()+"&aktiviteTipiId=" + $('#txt_aktiviteTipiId').text() +"&ss=ss",
+                    type : 'post',
+                    success: function () {
+                    	
+                       //swiperParent.swipeTo(2);
+                       gotoAll();
+                    },
+                    error: function(textStatus) {
+                    	alert("HATA :  http://yesiscrm.net/ws/api/aktivite/Tamamlandi?id="+ $('#txt_id').text() +"&durumId=iptal&aciklama=" + $('#txtcomment').text());
+				        alert(textStatus);
+   					}
+                });
 });
+
+
+$("#btn_wait").on("click", function(){
+
+                 $.ajax({
+                    url: "http://yesiscrm.net/ws/api/aktivite/beklemede?id="+$('#txt_id').text()+"&durumId=12&aciklama=" + $('#txtComment').text()+"&aktiviteTipiId=" + $('#txt_aktiviteTipiId').text()+"&xx=xx" ,
+                    type : 'post',
+                    success: function () {
+                    	
+                       //swiperParent.swipeTo(2);
+                       gotoAll();
+                    },
+                    error: function(textStatus) {
+                    	alert("http://yesiscrm.net/ws/api/aktivite/put?id="+ $('#txt_id').text() +"&durumId=iptal&aciklama=" + $('#txtcomment').text());
+				        alert(textStatus);
+   					}
+                });
 });
+
+
+
+$("#btn_cancel").on("click", function(){
+
+                $.ajax({
+                    url: "http://yesiscrm.net/ws/api/aktivite/iptal?id="+$('#txt_id').text()+"&durumId=12&aciklama=" + $('#txtComment').text()+"&aktiviteTipiId=" + $('#txt_aktiviteTipiId').text()+"&iptal=1" ,
+                    type : 'post',
+                    success: function () {
+                    	
+                       //swiperParent.swipeTo(2);
+                       gotoAll();
+                    },
+                    error: function(textStatus) {
+                    	alert(
+                     "http://yesiscrm.net/ws/api/aktivite/iptal?id="+$('#txt_id').text()+"&durumId=12&aciklama=" + $('#txtcomment').text()+"&aktiviteTipiId=" + $('#txt_aktiviteTipiId').text()+"&iptal=1"
+                    	);
+				        
+   					}
+                });
+});
+
+
 </script>
 <script type="text/javascript">  
 function ajaxContact(theForm) {
@@ -871,5 +828,63 @@ var i = setInterval(function() {
 return false;
 }
 </script> 
+<script type='text/javascript'>
+function gotodetail(val){
+	swiperParent.swipeTo(1);
+
+ $.ajax({
+                    url: "http://yesiscrm.net/ws/api/aktivite/"+val,
+                    dataType: 'json',
+                    success: function (a) {
+                             $('#txt_id').html( a.Id );
+                        	 $('#txt_desc').html ( a.Aciklama  );
+                        	 $('#txt_Customer').html(a.Musteri);                                                   
+                             $('#txt_Personel').html(a.PersonelAdi);
+                             $('#txt_Aktivite').html(a.AktiviteDurumu);
+                             $('#txt_aktiviteTipiId').html(a.AktiviteTipiId);
+                             
+                    }
+                });
+}
+function gotoAll(){
+	swiperParent.swipeTo(2);
+
+
+
+$.ajax({
+                    url: "http://yesiscrm.net/ws/api/aktivite",
+                    dataType: 'json',
+                    success: function (a) {
+                        $('#ul_list ul').remove();
+                        $('#ul_list').append('<ul data-role="listview"></ul>');
+                        listItems = $('#ul_list').find('ul');
+
+                        $.each(a, function (key) {
+                        	
+                            html = '<li class="post" id="id_'+key+'">';
+                                                    html +=  '<a href="#"  ></a>';                     
+                                                     html +=  '<div class="post_right_reveal">';
+                                                     html +=  '<a href="#" onclick="gotodetail('+a[key].Id+')" >'+ a[key].Musteri +'<br>'+a[key].Aciklama  
+                                                     +'</a>';
+                                                     html +=  '</div>';
+                                                     
+
+                                                    html +=  '<div class="post_left">';
+                                                    html +=  '    <span >'+a[key].PersonelAdi+'</span> <br>';
+                                                    html +=  '    <span >'+a[key].AktiviteDurumu+'</span>';
+                                                    html +=  '</div>';
+                                                html +=  '</li>';
+                            
+                            
+                            listItems.append('<li>' + html + '</li>');
+                        });
+                        
+                        //$('#ul_list ul').listview();
+                        // Once all complete change the page
+                        //$.mobile.changePage("#results", "slide");
+                    }
+                });
+}
+</script>
 </body>
 </html>
