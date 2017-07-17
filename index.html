@@ -310,7 +310,6 @@ $("#btn_completed").on("click", function(){
                 });
 });
 
-
 $("#btn_wait").on("click", function(){
 
                  $.ajax({
@@ -327,8 +326,6 @@ $("#btn_wait").on("click", function(){
    					}
                 });
 });
-
-
 
 $("#btn_cancel").on("click", function(){
 
@@ -384,6 +381,20 @@ $("#btnEnvanterAra").on("click", function(){
                 });
 });
 
+
+$("#btn_servis").on("click", function(){
+
+                $.ajax({
+                    url: "http://yesiscrm.net/ws/api/servis/"+$('#txtServisComment').val() ,
+                    type : 'get',
+                    success: function () {                    	
+                       swiperParent.swipeTo(0);
+                    },
+                    error: function(textStatus) {
+                    	alert(" hata oldu ");
+   					}
+                });
+});
 
 </script>
 <script type="text/javascript">
