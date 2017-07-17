@@ -405,6 +405,40 @@ $("#btn_barkod").on("click", function(){
                         if(!result.cancelled)
                         {
                         	$('#txtBarkod').val(result.text);
+                        	
+                   $.ajax({
+                    url: "http://yesiscrm.net/ws/api/envanter/"+$('#txtBarkod').val() ,
+                    type : 'get',
+                    success: function (a) {
+                    	
+				       	var e = document.getElementById('tblAccPoint');
+				       	e.style.display = 'block';
+				       	
+				        var e2 = document.getElementById('tblServer');
+				        e2.style.display = 'none' ;
+				       	//e2.style.display = (e2.style.display == 'block') ? 'none' : 'block';
+                      	
+                    	
+                    	$('#lbl_Musteri').html( a.Musteri );
+                    	$('#lbl_MarkaModeli').html( a.MarkaModeli );
+                    	$('#lbl_AccessPointSSID').html( a.AccessPointSSID );
+                    	$('#lbl_AccessPointSifresi').html( a.AccessPointSifresi );
+                    	$('#lbl_AccessPointLocalIP').html( a.AccessPointLocalIP );
+                    	$('#lbl_AccessPointArayuzId').html( a.AccessPointArayuzId );
+                    	$('#lbl_ServerSifresi').html( a.ServerSifresi );
+                    	$('#lbl_FirmaIPPort').html( a.FirmaIPPort );
+                    	
+                    	
+                       swiperParent.swipeTo(3);
+                       
+                    },
+                    error: function(textStatus) {
+                    	alert(" hata oldu lütfen sonra tekrar deneyiniz");
+				        
+   					}
+                });
+                        	
+                        	
                             /*
                             if(result.format == "QR_CODE")
                             {
