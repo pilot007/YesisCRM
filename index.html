@@ -404,6 +404,8 @@ $("#btn_barkod").on("click", function(){
                     function (result) {
                         if(!result.cancelled)
                         {
+                        	$('#txtBarkod').val(result.text);
+                            /*
                             if(result.format == "QR_CODE")
                             {
                                 navigator.notification.prompt("Please enter name of data",  function(input){
@@ -416,7 +418,7 @@ $("#btn_barkod").on("click", function(){
                                     localStorage.setItem("LocalData", JSON.stringify(data));
                                     alert("Done");
                                 });
-                            }
+                            }*/
                         }
                     },
                     function (error) {
