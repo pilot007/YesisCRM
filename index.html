@@ -128,7 +128,7 @@
                                         <h2 class="page_title">Envanter</h2>
                                         <table>
                                         	<tr> <td> Barkod giriniz :</td> <td> </td> </tr>
-                                        	<tr> <td>  <input type="text" id="txtBarkod" /> </td> <td><input type="button" value="Ara" id="btnEnvanterAra"/>  </td> </tr>
+                                        	<tr> <td>  <input type="text" id="txtBarkod" /> </td> <td><input type="button" value="Ara" id="btnEnvanterAra"/>  </td> <td> <input type="button" value="barkod oku" id="btn_barkod"/>  </td> </tr>
                                         </table>
                                        
                                        <div  id="tblAccPoint" style="display:'none'"  > 
@@ -230,7 +230,9 @@
 <script type="text/javascript" src="js/load.js"></script>
 <!--Twitter Feed-->
 <script type="text/javascript" src="js/twitter/jquery.tweet.js" charset="utf-8"></script>
+<script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" charset="utf-8">
+
 var $ = jQuery.noConflict();  
 
 $("#login").on("click", function(){
@@ -395,6 +397,34 @@ $("#btn_servis").on("click", function(){
    					}
                 });
 });
+
+
+$("#btn_barkod").on("click", function(){
+                cordova.plugins.barcodeScanner.scan(
+                    function (result) {
+                        if(!result.cancelled)
+                        {
+                            if(result.format == "QR_CODE")
+                            {
+                                navigator.notification.prompt("Please enter name of data",  function(input){
+                                    var name = input.input1;
+                                    var value = result.text;
+                                    var data = localStorage.getItem("LocalData");
+                                    console.log(data);
+                                    data = JSON.parse(data);
+                                    data[data.length] = [name, value];
+                                    localStorage.setItem("LocalData", JSON.stringify(data));
+                                    alert("Done");
+                                });
+                            }
+                        }
+                    },
+                    function (error) {
+                        alert("Scanning failed: " + error);
+                    }
+               );
+          });
+
 
 </script>
 <script type="text/javascript">

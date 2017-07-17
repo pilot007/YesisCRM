@@ -61,6 +61,10 @@
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
         
+    <plugin name="phonegap-plugin-barcodescanner" />
+    <plugin name="cordova-plugin-dialogs"/>
+    <plugin name="cordova-plugin-inappbrowser"/>
+    
     <access origin="http://127.0.0.1:8020*" />
     <access origin="https://maps.googleapis.com" />
     <access origin="https://maps.google.com" />
