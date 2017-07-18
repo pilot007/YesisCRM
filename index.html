@@ -227,30 +227,55 @@
                                         <h2 class="page_title">Bilgisayar Envanteri</h2>
                                        
                                        <table >
+                                       	<tr> <td>Ram :</td> <td> 
+	                                       	 <select id="txtXCompanies" style="width:140px">
+	                                       	 	
+									         </select>
+												</td> </tr> 
+												
                                         		<tr> <td>Barkod :</td> <td><input type="text" id="txtEBarkod" /></td> </tr> 
                                         		<tr> <td>Cinsi :</td> <td> <input type="text" id="txtECinsi" /> </td> </tr> 
                                         		<tr> <td>Marka :</td> <td> <input type="text" id="txtEMarka" /> </td> </tr> 
                                         		<tr> <td>Kullanıcı Adı :</td> <td>  <input type="text" id="txtEKullanici" /> </td> </tr> 
                                         		<tr> <td>Parola :</td> <td>  <input type="text" id="txtEParola" /> </td> </tr> 
                                         		<tr> <td>Ram :</td> <td> 
-                                        			<select id="txtERam" >
-												  <option value="1">1</option>
-												  <option value="2">2</option>
-												  <option value="3">4</option>
-												  <option value="4">8</option>
-												  <option value="5">16</option>
+                                      			<select id="txtERam" style="width:140px">
+												  <option value="1GB">1GB</option>
+												  <option value="2GB">2GB</option>
+												  <option value="3GB">3GB</option>
+												  <option value="4GB">4GB</option>
+												  <option value="6GB">6GB</option>
+												  <option value="8GB">8GB</option>
+												  <option value="16GB">16GB</option>
+												  <option value="36GB">36GB</option>
 												</select>
                                         			 </td> </tr> 
-                                        		<tr> <td>CPU :</td> <td> <input type="text" id="txtECpu" /></td> </tr> 
+                                        		<tr> <td>CPU :</td> <td> 
+                                        	      <select id="txtECpu" style="width:140px">
+												  <option value="Pentium">Pentium</option>
+												  <option value="i3">i3</option>
+												  <option value="i5">i5</option>
+												  <option value="i7">i7</option>
+												</select>
+                                        			</td> </tr> 
                                         		<tr> <td>Hdd :</td> <td> <input type="text" id="txtEHdd" /> </td> </tr> 
-                                        		<tr> <td>İşletim Sistemi :</td> <td>  <input type="text" id="txtEisletimSistemi" /> </td> </tr> 
+                                        		<tr> <td>İşletim Sistemi :</td> <td>  
+                                        			
+                                        	    <select id="txtEisletimSistemi" style="width:140px">
+												  <option value="WinXP">winXP</option>
+												  <option value="Win7">Win7</option>
+												  <option value="Win10">Win10</option>
+												  <option value="WinServer">WinServer</option>
+												   <option value="MacOs">MACOS</option>
+												</select>
+                                        			
+                                        			</td> </tr> 
                                         		<tr> <td>Office Sürümü :</td> <td>  <input type="text" id="txtEOffice" /> </td> </tr> 
                                         		<tr> <td>İ.S. Key :</td> <td>  <input type="text" id="txtEIS" /> </td> </tr> 
                                         		<tr> <td>O.S. Key :</td> <td>  <input type="text" id="txtEOS" /> </td> </tr> 
                                         		<tr> <td>AntiVirüs :</td> <td>  <input type="text" id="txtEAntivirus" /> </td> </tr> 
                                         		<tr> <td>Paket Program :</td> <td>  <input type="text" id="txtEPaket" /> </td> </tr> 
-                                        		<tr> <td></td> <td>  <input type="button" value="Kaydet" id="btn_EnvBilgisayarKaydet"/> </td> </tr> 
-                                        		
+                                        		<tr> <td></td> <td>  <input type="button" value="Kaydet" id="btn_EnvBilgisayarKaydet"/> </td> </tr>                                        		
                                         </table>
                                        
                                         <div class="clearfix"></div>
@@ -501,6 +526,43 @@ $("#btn_servis").on("click", function(){
 });
 
 
+
+
+$("#btn_EnvBilgisayarKaydet").on("click", function(){
+
+                                        	html = 
+                                        	    '?txtXCompanies='+$('#txtXCompanies').val() +
+                                        	    '&txtEBarkod=' + $('#txtEBarkod').text() +
+                                        	    '&txtECinsi='+$('#txtECinsi').text() +
+                                        		'&txtEMarka='+$('#txtEMarka').text() +
+                                        		'&txtEKullanici='+$('#txtEKullanici').text() +
+                                        		'&txtEParola='+$('#txtEParola').text() +
+                                        		'&txtERam='+$('#txtERam').val() +
+												'&txtECpu='+$('#txtECpu').val() +
+												'&txtEHdd='+$('#txtEHdd').val() +
+                                        		'&txtEisletimSistemi='+$('#txtEisletimSistemi').val() +
+												'&txtEOffice='+$('#txtEOffice').text() +
+                                        		'&txtEIS='+$('#txtEIS').text() +
+                                        		'&txtEOS='+$('#txtEOS').text() +
+                                        		'&txtEAntivirus='+$('#txtEAntivirus').text() +
+                                        		'&txtEPaket='+$('#txtEPaket').text() ;
+  $.ajax({
+                    url: "http://yesiscrm.net/ws/api/EnvanterBilgisayar/get"+ html,
+                    type : 'get',
+                    success: function () {
+                    	
+                       //swiperParent.swipeTo(2);
+                       gotoAll();
+                    },
+                    error: function(textStatus) {
+                    	alert(textStatus);
+   					}
+                });
+
+
+});
+
+
 $("#btn_barkod").on("click", function(){
                 cordova.plugins.barcodeScanner.scan(
                     function (result) {
@@ -645,7 +707,26 @@ function gotodetail(val){
 }
 function gotoEnvanterBilgisayar()
 {
-		swiperParent.swipeTo(6);
+	$.ajax({
+                    url: "http://yesiscrm.net/ws/api/company/",
+                    dataType: 'json',
+                    success: function (a) {
+                       
+                        $('#txtXCompanies select').remove();
+                        //$('#txtXCompanies').append('<ul data-role="listview"></ul>');
+                        //listItems = $('#txtXCompanies').find('ul');
+
+                        $.each(a, function (key) {
+                        	
+                            
+                            var o = new Option(a[key].SirketAdi, a[key].Id);
+							$('#txtXCompanies').append(o);
+                        });      
+                            
+                     swiperParent.swipeTo(6);                            
+                    }
+                });
+		
 }
 function gotoEnvanterYazici()
 {
