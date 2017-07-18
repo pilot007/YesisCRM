@@ -24,7 +24,7 @@
     <body>    	
   <div id="header">
       <div class="gohome"><a href="#"><img src="images/icons/home.png" alt="" title="" /></a></div>
-      <div class="gomenu"><a href="#" onclick="swiperParent.swipeTo(9);"><img src="images/icons/contact.png" alt="" title="" /></a></div>
+      <div class="gomenu"></div>
   </div>
   <div class="swiper-container swiper-parent">
     <div class="swiper-wrapper">    
@@ -68,8 +68,7 @@
                                         		<tr> <td>Personel :</td> <td> <p id="txt_Personel"></p> </td> </tr> 
                                         		<tr> <td>Aktivite Durum :</td> <td>  <p id="txt_Aktivite"> </p> </td> </tr> 
                                         		<tr> <td>Açıklama :</td> <td>  <p id="txt_desc"> </p> </td> </tr> 
-                                        	</table>
-                                        	
+                                        	</table>                                    	
                                             
                                             <textarea id="txtComment" rows="5" cols="70"></textarea>
                                         </div>
@@ -200,9 +199,9 @@
                                         
 										<div class="menu">
                                         <ul>
-                                        <li><a href="#" onclick="gotoSifreBul();" ><img src="images/icons/blog.png" alt="" title="" /><span><h3>Bilgisayar</h3></span></a></li>
-                                        <li><a href="#" onclick="gotoSifreBul();"><img src="images/icons/about.png" alt="" title="" /><span><h3>Yazıcı</h3></span></a></li>
-                                        <li><a href="#" onclick="gotoServisTalep();"><img src="images/icons/tools.png" alt="" title="" /><span><h3>AccessPoint</h3></span></a></li>
+                                        <li><a href="#" onclick="gotoEnvanterBilgisayar();" ><img src="images/icons/blog.png" alt="" title="" /><span><h3>Bilgisayar</h3></span></a></li>
+                                        <li><a href="#" onclick="gotoEnvanterYazici();"><img src="images/icons/about.png" alt="" title="" /><span><h3>Yazıcı</h3></span></a></li>
+                                        <li><a href="#" onclick="gotoEnvanterAP();"><img src="images/icons/tools.png" alt="" title="" /><span><h3>AccessPoint</h3></span></a></li>
                                         </ul>
                                         <div class="clearfix"></div>
                                         </div>
@@ -215,6 +214,109 @@
               </div>
               <div class="swiper-scrollbar"></div>
      </div>
+     
+     
+     
+      <!--Page 6 content envanter bilgisayar-->
+      <div class="swiper-slide sliderbg">
+      <div class="swiper-container swiper-nested">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                              <div class="slide-inner">
+                                        <div class="pages_container">
+                                        <h2 class="page_title">Bilgisayar Envanteri</h2>
+                                       
+                                       <table >
+                                        		<tr> <td>Barkod :</td> <td><input type="text" id="txtEBarkod" /></td> </tr> 
+                                        		<tr> <td>Cinsi :</td> <td> <input type="text" id="txtECinsi" /> </td> </tr> 
+                                        		<tr> <td>Marka :</td> <td> <input type="text" id="txtEMarka" /> </td> </tr> 
+                                        		<tr> <td>Kullanıcı Adı :</td> <td>  <input type="text" id="txtEKullanici" /> </td> </tr> 
+                                        		<tr> <td>Parola :</td> <td>  <input type="text" id="txtEParola" /> </td> </tr> 
+                                        		<tr> <td>Ram :</td> <td> 
+                                        			<select id="txtERam" >
+												  <option value="1">1</option>
+												  <option value="2">2</option>
+												  <option value="3">4</option>
+												  <option value="4">8</option>
+												  <option value="5">16</option>
+												</select>
+                                        			 </td> </tr> 
+                                        		<tr> <td>CPU :</td> <td> <input type="text" id="txtECpu" /></td> </tr> 
+                                        		<tr> <td>Hdd :</td> <td> <input type="text" id="txtEHdd" /> </td> </tr> 
+                                        		<tr> <td>İşletim Sistemi :</td> <td>  <input type="text" id="txtEisletimSistemi" /> </td> </tr> 
+                                        		<tr> <td>Office Sürümü :</td> <td>  <input type="text" id="txtEOffice" /> </td> </tr> 
+                                        		<tr> <td>İ.S. Key :</td> <td>  <input type="text" id="txtEIS" /> </td> </tr> 
+                                        		<tr> <td>O.S. Key :</td> <td>  <input type="text" id="txtEOS" /> </td> </tr> 
+                                        		<tr> <td>AntiVirüs :</td> <td>  <input type="text" id="txtEAntivirus" /> </td> </tr> 
+                                        		<tr> <td>Paket Program :</td> <td>  <input type="text" id="txtEPaket" /> </td> </tr> 
+                                        		<tr> <td></td> <td>  <input type="button" value="Kaydet" id="btn_EnvBilgisayarKaydet"/> </td> </tr> 
+                                        		
+                                        </table>
+                                       
+                                        <div class="clearfix"></div>
+     
+                                        </div>
+                                        <!--End of page container-->
+                              </div>
+                    </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+     </div>
+     </div>     
+     
+     
+           <!--Page 7 content envanter yazici-->
+      <div class="swiper-slide sliderbg">
+      <div class="swiper-container swiper-nested">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                              <div class="slide-inner">
+                                        <div class="pages_container">
+                                        <h2 class="page_title">Envanter</h2>
+                                        <table>
+                                        	<tr> <td> Barkod giriniz :</td> <td> </td> </tr>
+                                        	<tr> <td>  <input type="text" id="txtBarkod" /> </td> <td><input type="button" value="Ara" id="btnEnvanterAra"/>  </td> <td> <input type="button" value="barkod oku" id="btn_barkod"/>  </td> </tr>
+                                        </table>
+                                       
+                                      
+                                        <div class="clearfix"></div>
+     
+                                        </div>
+                                        <!--End of page container-->
+                              </div>
+                    </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+     </div>
+     </div>
+     
+     
+           <!--Page 8 content envanter AP-->
+      <div class="swiper-slide sliderbg">
+      <div class="swiper-container swiper-nested">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                              <div class="slide-inner">
+                                        <div class="pages_container">
+                                        <h2 class="page_title">Envanter</h2>
+                                        <table>
+                                        	<tr> <td> Barkod giriniz :</td> <td> </td> </tr>
+                                        	<tr> <td>  <input type="text" id="txtBarkod" /> </td> <td><input type="button" value="Ara" id="btnEnvanterAra"/>  </td> <td> <input type="button" value="barkod oku" id="btn_barkod"/>  </td> </tr>
+                                        </table>
+                                      
+                                        </div>
+                                        <!--End of page container-->
+                              </div>
+                    </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+     </div>
+     </div>
+     
+     
+     
+     
+     
      </div>
      <!--End of pages--> 
 
@@ -540,6 +642,18 @@ function gotodetail(val){
                              
                     }
                 });
+}
+function gotoEnvanterBilgisayar()
+{
+		swiperParent.swipeTo(6);
+}
+function gotoEnvanterYazici()
+{
+		swiperParent.swipeTo(7);
+}
+function gotoEnvanterAP()
+{
+		swiperParent.swipeTo(8);
 }
 function gotoSifreBul(){
 	swiperParent.swipeTo(3);
