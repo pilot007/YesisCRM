@@ -100,7 +100,7 @@ $('.swiper-nested').each(function(){
 })
 
 $('.gohome').click(function(){
- swiperParent.swipeTo(0);
+ swiperParent.swipeTo(1);
 });
 jQuery(function($) {
 $("#CommentForm").validate({

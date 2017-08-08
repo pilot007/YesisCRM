@@ -11,8 +11,6 @@
     <feature name="http://api.phonegap.com/1.0/network" />
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	
-	<gap:plugin  name="org.apache.cordova.dialogs" source="npm" ></gap:plugin>
-
 	<gap:config-file platform="ios" parent="UIStatusBarHidden">
 	    <true/>
 	</gap:config-file>

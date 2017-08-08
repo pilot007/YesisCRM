@@ -30,6 +30,39 @@
     <div class="swiper-wrapper">    
     	
       <!--Menu page-->
+      
+       
+    		
+    <div class="swiper-slide sliderbg_menu">
+          <div>
+                   <div>
+                        <div class="swiper-slide">
+                                  <div class="slide-inner">
+                                        <div class="logo">YESIS MOBILE</div>
+                                        <div class="menu">
+                                        <ul>
+                                        <h2 class="page_title">Lütfen Giriş Yapınız</h2>
+                                        <table>
+                                        	
+                                        	<tr> <td> Kullanıcı Adı  </td> <td>  <input type="text" id="txtLoginName" />  </td> </tr>
+
+                                        	<tr> <td> Şifre  </td> <td>  <input type="password" id="txtPassword" />  </td> </tr>
+                                       
+                                            <tr> <td>.</td> <td>  <input type="button" value="Giriş" id="btn_login"/> </td> </tr>                                        		
+
+                                        </table>
+
+                                        </ul>
+                                        <div class="clearfix">.</div>
+                                        </div>
+                                 </div>
+                         </div>
+                   </div>
+                
+          </div> 
+      </div>
+    	
+      
       <div class="swiper-slide sliderbg_menu">
           <div class="swiper-container swiper-nested">
                    <div class="swiper-wrapper">
@@ -48,7 +81,7 @@
                                  </div>
                          </div>
                    </div>
-                  <div class="swiper-scrollbar"></div>
+                 
           </div> 
       </div>
       
@@ -58,7 +91,7 @@
                <div class="swiper-wrapper">
                     <div class="swiper-slide">
                               <div class="slide-inner">
-                              	<div id="txt_aktiviteTipiId"></div> 
+                              	<div id="txt_aktiviteTipiId"> </div> 
                                         <div class="pages_container">
                                      
                                         <div id="tab1" >
@@ -70,7 +103,7 @@
                                         		<tr> <td>Açıklama :</td> <td>  <p id="txt_desc"> </p> </td> </tr> 
                                         	</table>                                    	
                                             
-                                            <textarea id="txtComment" rows="5" cols="70"></textarea>
+                                            <textarea id="txtComment" rows="5" cols="70"> </textarea>
                                         </div>
                                                                                                                       
                                         <a href="#" id="btn_completed" class="button_12 blue blue_borderbottom">Tamamlandı</a>
@@ -302,7 +335,6 @@
                                         	<tr> <td> Barkod giriniz :</td> <td> </td> </tr>
                                         	<tr> <td>  <input type="text" id="txtBarkod" /> </td> <td><input type="button" value="Ara" id="btnEnvanterAra"/>  </td> <td> <input type="button" value="barkod oku" id="btn_barkod"/>  </td> </tr>
                                         </table>
-                                       
                                       
                                         <div class="clearfix"></div>
      
@@ -337,14 +369,10 @@
               <div class="swiper-scrollbar"></div>
      </div>
      </div>
-     
-     
-     
-     
-     
+
      </div>
      <!--End of pages--> 
-
+     
     </div>
     <div class="pagination"></div>
   </div>
@@ -362,14 +390,41 @@
 
 var $ = jQuery.noConflict();  
 
-$("#login").on("click", function(){
+var uname = localStorage.getItem("USERNAME");
+var upass = localStorage.getItem("PASSWORD");
+
+$('#txtLoginName').val(uname);
+$('#txtPassword').val(upass);
+
+
+$("#btn_login").on("click", function(){
 
 $.ajax({
-                    url: "http://yesiscrm.net/ws/api/aktivite",
+                   url: "http://yesiscrm.net/ws/api/login?loginName="+ $('#txtLoginName').val() +"&loginPass="+$('#txtPassword').val(),
+                    dataType: 'json',
+                    success: function (a) {
+                    
+                    	if (a!=null)
+                    	{
+                    		localStorage.setItem("ID", a.Id);
+                    		localStorage.setItem("USERNAME", $('#txtLoginName').val() );
+                    		localStorage.setItem("PASSWORD", $('#txtPassword').val() );
+                        	swiperParent.swipeTo(1);
+                    	}
+                    }
+                });
+});
+
+
+$("#login").on("click", function(){
+	
+var pref1 = localStorage.getItem("ID");
+$.ajax({							
+                    url: "http://yesiscrm.net/ws/api/aktivite?personelId="+pref1 + "&id=0",
                     dataType: 'json',
                     success: function (a) {
                         // Remove any list - so the new one can be added.
-                        swiperParent.swipeTo(2);
+                        swiperParent.swipeTo(3);
 
                         $('#ul_list ul').remove();
                         // Need to add UL on AJAX call or formatting of userlist is not displayed
@@ -500,7 +555,7 @@ $("#btnEnvanterAra").on("click", function(){
                     	$('#lbl_FirmaIPPort').html( a.FirmaIPPort );
                     	
                     	
-                       swiperParent.swipeTo(3);
+                       swiperParent.swipeTo(4);
                        
                     },
                     error: function(textStatus) {
@@ -517,7 +572,7 @@ $("#btn_servis").on("click", function(){
                     url: "http://yesiscrm.net/ws/api/servis/"+$('#txtServisComment').val() ,
                     type : 'get',
                     success: function () {                    	
-                       swiperParent.swipeTo(0);
+                       swiperParent.swipeTo(1);
                     },
                     error: function(textStatus) {
                     	alert(" hata oldu ");
@@ -593,7 +648,7 @@ $("#btn_barkod").on("click", function(){
                     	$('#lbl_FirmaIPPort').html( a.FirmaIPPort );
                     	
                     	
-                       swiperParent.swipeTo(3);
+                       swiperParent.swipeTo(4);
                        
                     },
                     error: function(textStatus) {
@@ -690,7 +745,7 @@ function gotodetail(val){
   $("#txtComment").text('');
     $("#txtComment").val('');
 
-	swiperParent.swipeTo(1);
+	swiperParent.swipeTo(2);
  $.ajax({
                     url: "http://yesiscrm.net/ws/api/aktivite/"+val,
                     dataType: 'json',
@@ -723,21 +778,21 @@ function gotoEnvanterBilgisayar()
 							$('#txtXCompanies').append(o);
                         });      
                             
-                     swiperParent.swipeTo(6);                            
+                     swiperParent.swipeTo(7);                            
                     }
                 });
 		
 }
 function gotoEnvanterYazici()
 {
-		swiperParent.swipeTo(7);
+		swiperParent.swipeTo(8);
 }
 function gotoEnvanterAP()
 {
-		swiperParent.swipeTo(8);
+		swiperParent.swipeTo(9);
 }
 function gotoSifreBul(){
-	swiperParent.swipeTo(3);
+	swiperParent.swipeTo(4);
 	var e = document.getElementById('tblAccPoint');
 	e.style.display = 'none';
 				       	
@@ -745,10 +800,10 @@ function gotoSifreBul(){
 	e2.style.display = 'none' ;
 }
 function gotoServisTalep(){
-	swiperParent.swipeTo(4);
+	swiperParent.swipeTo(5);
 }
 function gotoEnvanter(){
-	swiperParent.swipeTo(5);
+	swiperParent.swipeTo(6);
 }
 function gotoAll(){
 
@@ -756,7 +811,7 @@ $.ajax({
                     url: "http://yesiscrm.net/ws/api/aktivite",
                     dataType: 'json',
                     success: function (a) {
-                    	swiperParent.swipeTo(2);
+                    	swiperParent.swipeTo(3);
 
                         $('#ul_list ul').remove();
                         $('#ul_list').append('<ul data-role="listview"></ul>');
