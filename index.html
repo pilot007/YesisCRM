@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+ <meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
@@ -42,24 +43,28 @@
                                 	       <br/>  
                                 	      <br/>
                                 	      <br/>               
+                                	      <br/>  
+                                	      <br/>
+                                	      <br/>
+                                	      <br/>
+                                	       <br/>  
+                                	      <br/>
+                                	      <br/>               
                                 	      <center>
-                                          <table>
+                                	      	
+                                          <table >
+                                        	  <tbody>
                                         	
-                                        	<tr> <td> Kullanıcı Adı  </td> <td>  <input type="text" id="txtLoginName" />  </td> </tr>
+                                        	<tr > <td> Kullanıcı Adı  </td> <td>  <input type="text" id="txtLoginName" />  </td> </tr>
 
                                         	<tr> <td> Şifre  </td> <td>  <input type="password" id="txtPassword" />  </td> </tr>
                                        
                                             <tr> <td>.</td> <td>  <input type="button" value="Giriş" id="btn_login"/> </td> </tr>                                        		
-
+ 											</tbody>
                                         </table>
                                         </center>
                                 	      <br/>
                                 	      <br/>
-                                	      <br/>
-                                	      <br/>  
-                                	      <br/>
-                                	      <br/>
-                                	      <br/> 
                                 	      <br/>
                                 	      <br/>
                                 	      <br/>
@@ -637,7 +642,7 @@
                                          <textarea id="txtServisComment" rows="5" cols="70"></textarea>
                                         </div>
                                                                                                                       
-                                        <a href="#" id="btn_servis" class="button_11 orange blue_borderbottom">Gönder</a>
+                                        <a href="#" id="btn_servis" class="button_11 blue blue_borderbottom">Gönder</a>
                                         <div class="clearfix"></div>
       									</div>
                                         <!--End of page container-->
@@ -1317,7 +1322,8 @@ $("#btn_completed").on("click", function(){
                     success: function () {
                     	
                        //swiperParent.swipeTo(2);
-                       gotoAll();
+                       gotoActivityL();
+                       //gotoAll();
                     },
                     error: function(textStatus) {
                     	alert("HATA :  http://yesiscrm.net/ws/api/aktivite/Tamamlandi?id="+ $('#txt_id').text() +"&durumId=iptal&aciklama=" + $('#txtcomment').val());
@@ -1334,7 +1340,8 @@ $("#btn_wait").on("click", function(){
                     success: function () {
                     	
                        //swiperParent.swipeTo(2);
-                       gotoAll();
+                       gotoActivityL();
+                       //gotoAll();
                     },
                     error: function(textStatus) {
                     	alert("http://yesiscrm.net/ws/api/aktivite/put?id="+ $('#txt_id').text() +"&durumId=iptal&aciklama=" + $('#txtcomment').val());
@@ -1351,7 +1358,8 @@ $("#btn_cancel").on("click", function(){
                     success: function () {
                     	
                        //swiperParent.swipeTo(2);
-                       gotoAll();
+                       gotoActivityL();
+                       //gotoAll();
                     },
                     error: function(textStatus) {
                     	alert(
@@ -1406,6 +1414,7 @@ $("#btn_servis").on("click", function(){
                     type : 'get',
                     success: function () {                    	
                        //swiperParent.swipeTo(1);
+                       $('#txtServisComment').val("");
                        window.location.href ="#menu";
                     },
                     error: function(textStatus) {
@@ -1630,12 +1639,12 @@ $.ajax({
                         */
                         
                         $.each(a, function (key) {
-                        	
-                            html = '<li class="post" id="id_'+key+'">';
-                                                    html +=  '<a href="#"  ></a>';                     
+                        							 html = '<a href="#" onclick="gotodetail('+a[key].Id+')" >';
+                            						 html +=   '<li class="post" id="id_'+key+'">';
+                                                                         
                                                      html +=  '<div class="post_right_reveal">';
-                                                     html +=  '<a href="#" onclick="gotodetail('+a[key].Id+')" >'+ a[key].Musteri +'<br>'+a[key].Aciklama  
-                                                     +'</a>';
+                                                     html +=   a[key].Musteri +'<br>'+a[key].Aciklama  
+                                                     ;
                                                      html +=  '</div>';
                                                      
 
@@ -1643,7 +1652,7 @@ $.ajax({
                                                     html +=  '    <span >'+a[key].PersonelAdi+'</span> <br>';
                                                     html +=  '    <span >'+a[key].AktiviteDurumu+'</span>';
                                                     html +=  '</div>';
-                                                html +=  '</li>';
+                                                html +=  '</li>'  +'</a>';
                             
                             
                             listItems.append( html );
@@ -1717,6 +1726,7 @@ function gotoEnvanterAP()
 }
 function gotoSifreBul(){
 	//swiperParent.swipeTo(4);
+	$('#txtBarkod').val("");
 	window.location.href ="#password";
 	var e = document.getElementById('tblAccPoint');
 	e.style.display = 'none';
