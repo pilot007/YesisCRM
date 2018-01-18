@@ -25,7 +25,9 @@ h2.page_title{color:#ffffff;}
 
 .scrolltop{ border:1px #fff solid;}
 .gohome{ border:0px #fff solid;}
-.gomenu{ border:0px #fff solid;}
+.gomenu {
+    border: 0px #fff solid;
+}
 
 .pages_container{ margin:1px 1%; background:none; padding:5px 1%; border:none; width:99%;}
 
