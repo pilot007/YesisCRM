@@ -3,9 +3,7 @@
 * Abdurrahman ASLIYÜCE
 */
 jQuery(function($){
-	$.supersized({
-		slides  :  	[ {image : 'images/bg.jpg'} ]
-	});
+	 
 });
 
 $(document).ready(function(){
